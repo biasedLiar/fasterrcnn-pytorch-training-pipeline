@@ -242,7 +242,7 @@ def main(args):
         print('-'*50)
 
     print('TEST PREDICTIONS COMPLETE')
-    cv2.destroyAllWindows()
+    #cv2.destroyAllWindows()
     # Calculate and print the average FPS.
     avg_fps = total_fps / frame_count
     print(f"Average FPS: {avg_fps:.3f}")
