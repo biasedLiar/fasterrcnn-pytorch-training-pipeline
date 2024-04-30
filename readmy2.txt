@@ -1,0 +1,22 @@
+python train.py --data data_configs/ntnu.yaml --epochs 25 --batch 16 --imgsz 1024
+
+python eval.py --model fasterrcnn_resnet50_fpn_v2 --weights outputs/training/res_1/best_model.pth --data data_configs/ntnu.yaml --batch 4 --imgsz 1024
+
+python inference.py --input data/dataset_voc/archive/test/images/frame_000322.png --weights outputs/training/res_1/best_model.pth --imgsz 1024
+python inference.py --input data/dataset_voc/archive/test/images/frame_000561.png --weights outputs/training/res_1/best_model.pth --imgsz 1024
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+python train.py --data data_configs/ntnu.yaml --epochs 25 --batch 16 --imgsz 1024 --project-dir /work/eliaseb/computervision -ca 
+
+python eval.py --model fasterrcnn_resnet50_fpn_v2 --weights /work/eliaseb/computervision/best_model.pth --data data_configs/ntnu.yaml --batch 4 --imgsz 1024
+
+python inference.py --input data/dataset_voc/archive/test/images/frame_000322.png --weights /work/eliaseb/computervision/best_model.pth --imgsz 1024
+python inference.py --input data/dataset_voc/archive/test/images/frame_000561.png --weights /work/eliaseb/computervision/best_model.pth --imgsz 1024
+
+
+
+
+python eval.py --model fasterrcnn_resnet50_fpn_v2 --weights /work/eliaseb/computervision/best_model.pth --data data_configs/ntnu.yaml --batch 4 --imgsz 1024
